@@ -1,0 +1,23 @@
+[Default]
+files = game/*.py
+ignore = game/*.orig
+max_line_length = 110
+use_spaces = True
+editor = subl
+
+[python]
+bears = SpaceConsistencyBear, QuotesBear
+language = Python
+preferred_quotation = '
+
+default_actions = *: ApplyPatchAction
+
+[autopep8]
+bears = PEP8Bear, PycodestyleBear
+pycodestyle_ignore = E303, E121, E123, E126, E133, E226, E241, E242, E704, W503
+
+default_actions = PEP8Bear: ApplyPatchAction
+
+[linelength]
+bears = LineLengthBear
+ignore_length_regex = ^.*https?:// #ignore in case of a link

@@ -48,26 +48,26 @@ while(level <= 3):
             for j in range(1, 135):
                 if(j != 134):
                     if(arr[i][j] == '#'):
-                        print('\033[1;37;47m'+' '+'\033[0m', end='')
+                        print("\033[1;37;47m"+" "+"\033[0m", end="")
                     elif(arr[i][j] == 'X'):
-                        print(arr[i][j], end='')
+                        print(arr[i][j], end="")
                     elif(arr[i][j] == 'B'):
-                        print('\033[1;32;48m'+arr[i][j]+'\033[0m', end='')
+                        print("\033[1;32;48m"+arr[i][j]+"\033[0m", end="")
                     elif(arr[i][j] == 'E'):
-                        print('\033[1;31;48m'+arr[i][j]+'\033[0m', end='')
+                        print("\033[1;31;48m"+arr[i][j]+"\033[0m", end="")
                     elif(arr[i][j] == 'O' or arr[i][j] == '0' or arr[i][j] == '1' or arr[i][j] == '2'):
-                        print('\033[1;36;48m'+arr[i][j]+'\033[0m', end='')
+                        print("\033[1;36;48m"+arr[i][j]+"\033[0m", end="")
                     elif(arr[i][j] == 'e'):
-                        print('\033[1;33;48m'+arr[i][j]+'\033[0m', end='')
+                        print("\033[1;33;48m"+arr[i][j]+"\033[0m", end="")
                     elif(arr[i][j] == '/'):
-                        print('\033[1;35;48m'+arr[i][j]+'\033[0m', end='')
+                        print("\033[1;35;48m"+arr[i][j]+"\033[0m", end="")
                     else:
-                        print(arr[i][j], end='')
+                        print(arr[i][j], end="")
                 else:
-                    print('\033[1;37;47m'+' '+'\033[0m')
-        print('YOUR SCORE: ', end='')
+                    print("\033[1;37;47m"+" "+"\033[0m")
+        print('YOUR SCORE: ', end="")
         print(bm.score)
-        print('YOUR LIFE: ', end='')
+        print('YOUR LIFE: ', end="")
         print(bm.lifes)
 
     bmb = None
@@ -93,8 +93,8 @@ while(level <= 3):
         enemyremaining = 2*level+3
         while i != 2*level+3:
             count += 1
-            while(i < 2*level+3 and enemy[i] is None):
-                if enemy[i] is None:
+            while(i < 2*level+3 and enemy[i] == None):
+                if enemy[i] == None:
                     enemyremaining -= 1
                 i += 1
 
@@ -206,7 +206,7 @@ while(level <= 3):
 
         moveEnemy()
         for i in range(2*level+3):
-            while(i < 2*level+3 and enemy[i] is None):
+            while(i < 2*level+3 and enemy[i] == None):
                 i += 1
 
             if i >= 2*level+3:
